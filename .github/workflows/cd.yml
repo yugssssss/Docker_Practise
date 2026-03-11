@@ -32,7 +32,7 @@ jobs:
     #     cache: 'npm'
     #     # actual commands
     - name : Build Docker Image
-      run: docker build -t yugcoder/Docker_practise .
+      run: docker build -t yugcoder/docker_practise .
 
     - name: Docker Login
       run: echo "${{ secrets.YB_DOCKERHUB_PASS }}" | docker login -u "${{ secrets.YB_DOCKERHUB_USERNAME }}" --password-stdin
@@ -41,6 +41,6 @@ jobs:
       run: echo "Docker login successful"
 
     - name: Push Docker Image
-      run: docker push yugcoder/Docker_practise
+      run: docker push yugcoder/docker_practise
 
  
