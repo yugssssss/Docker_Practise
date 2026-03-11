@@ -35,7 +35,7 @@ jobs:
       run: docker build -t yugcoder/docker_practise .
 
     - name: Docker Login
-      run: echo "${{ secrets.YB_DOCKERHUB_PASS }}" | docker login -u "${{ secrets.YB_DOCKERHUB_USERNAME }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_ASS_PASS }}" | docker login -u "${{ secrets.DOCKER_ASS_USER }}" --password-stdin
 
     - name: Login Successful
       run: echo "Docker login successful"
